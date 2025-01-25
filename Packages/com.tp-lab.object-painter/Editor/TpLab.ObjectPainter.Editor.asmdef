@@ -1,6 +1,9 @@
 {
-    "name": "VRChatPackageTemplate.Editor",
-    "references": [],
+    "name": "TpLab.ObjectPainter.Editor",
+    "rootNamespace": "TpLab.ObjectPainter",
+    "references": [
+        "com.tp-lab.object-painter"
+    ],
     "includePlatforms": [
         "Editor"
     ],
