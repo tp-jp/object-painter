@@ -22,6 +22,12 @@ VCCから任意のプロジェクトを選択し、「Manage Project」から「
 
 リポジトリを使わずに導入したい場合は [releases](https://github.com/tp-jp/object-painter/releases) から unitypackage をダウンロードして、プロジェクトにインポートしてください。
 
+## Install manually (UPM)
+
+以下を UPM でインストールしてください。
+```
+https://github.com/tp-jp/object-painter.git?path=Packages/com.tp-lab.object-painter
+```
 
 ## VPMを使わずにPackageManagerから導入したい場合
 
@@ -32,6 +38,42 @@ VCCから任意のプロジェクトを選択し、「Manage Project」から「
 
 ## 使い方
 
+1. ツールバーから `TpLab>ObjectPainter` を選択します。
+
+2. 表示されたウィンドウの設定を行い、ObjectPaintを実施します。
+
+   - Target Mesh     
+     オブジェクトを配置する対象メッシュを指定します。
+
+   - Place Object
+     配置するオブジェクトを指定します。
+
+   - Parent Object
+     配置したオブジェクトの親を指定します。
+     
+   - Brush Size
+     オブジェクトを配置するブラシのサイズを指定します。
+     
+   - Density
+     オブジェクトを配置する密度を指定します。
+
+   - Placement Settings
+     配置設定を指定します。
+
+     - Rotation Range X/Y/Z
+       配置したオブジェクトの回転範囲を指定します。
+
+     - Scale Range
+       配置したオブジェクトのスケール範囲を指定します。
+
+  - Limit Settings
+    範囲の制限値を指定します。
+
+    - Brush Size Limit
+      ブラシサイズの制限値を指定します。
+
+    - Density Limit
+      密度の制限値を指定します。
 
 ## 更新履歴
 
