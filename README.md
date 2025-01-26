@@ -75,6 +75,18 @@ https://github.com/tp-jp/object-painter.git?path=Packages/com.tp-lab.object-pain
     - Density Limit
       密度の制限値を指定します。
 
+    - Rotation Min Limit X/Y/Z
+      各回転軸範囲の最小値を指定します。
+
+    - Rotation Max Limit X/Y/Z
+      各回転軸範囲の最大値を指定します。
+
+    - Scale Min Limit
+      スケール範囲の最小値を指定します。
+
+    - Scale Max Limit
+      スケール範囲の最大値を指定します。
+
 ## 更新履歴
 
 [CHANGELOG](CHANGELOG.md)
