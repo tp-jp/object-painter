@@ -87,8 +87,8 @@ https://github.com/tp-jp/object-painter.git?path=Packages/com.tp-lab.object-pain
      - Scale Max Limit  
        スケール範囲の最大値を指定します。
 
-   - Start Painting
-     オブジェクトの配置を開始します。
+   - Start Painting  
+     オブジェクトの配置を開始します。  
      開始後に対象メッシュ上で左クリックを押すとオブジェクトを配置できます。
 
 ## 更新履歴
