@@ -45,47 +45,51 @@ https://github.com/tp-jp/object-painter.git?path=Packages/com.tp-lab.object-pain
    - Target Mesh     
      オブジェクトを配置する対象メッシュを指定します。
 
-   - Place Object
+   - Place Object  
      配置するオブジェクトを指定します。
 
-   - Parent Object
+   - Parent Object  
      配置したオブジェクトの親を指定します。
      
-   - Brush Size
+   - Brush Size  
      オブジェクトを配置するブラシのサイズを指定します。
      
-   - Density
+   - Density  
      オブジェクトを配置する密度を指定します。
 
-   - Placement Settings
+   - Placement Settings  
      配置設定を指定します。
 
-     - Rotation Range X/Y/Z
+     - Rotation Range X/Y/Z  
        配置したオブジェクトの回転範囲を指定します。
 
-     - Scale Range
+     - Scale Range  
        配置したオブジェクトのスケール範囲を指定します。
 
-  - Limit Settings
+   - Limit Settings  
     範囲の制限値を指定します。
 
-    - Brush Size Limit
-      ブラシサイズの制限値を指定します。
+     - Brush Size Limit  
+       ブラシサイズの制限値を指定します。
 
-    - Density Limit
-      密度の制限値を指定します。
+     - Density Limit  
+       密度の制限値を指定します。
 
-    - Rotation Min Limit X/Y/Z
-      各回転軸範囲の最小値を指定します。
+     - Rotation Min Limit X/Y/Z  
+       各回転軸範囲の最小値を指定します。
 
-    - Rotation Max Limit X/Y/Z
-      各回転軸範囲の最大値を指定します。
+     - Rotation Max Limit X/Y/Z  
+       各回転軸範囲の最大値を指定します。
 
-    - Scale Min Limit
-      スケール範囲の最小値を指定します。
+     - Scale Min Limit  
+       スケール範囲の最小値を指定します。
 
-    - Scale Max Limit
-      スケール範囲の最大値を指定します。
+     - Scale Max Limit  
+       スケール範囲の最大値を指定します。
+
+   - Start Painting
+     オブジェクトの配置を開始します。
+     開始後に対象メッシュ上で左クリックを押すとオブジェクトを配置できます。
 
 ## 更新履歴
 
