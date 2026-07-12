@@ -134,13 +134,17 @@ namespace TpLab.ObjectPainter.Editor
                 // プレハブを配置
                 var instance = (GameObject)PrefabUtility.InstantiatePrefab(_setting.placeObject);
                 instance.transform.position = hit.point;
-                instance.transform.rotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
 
-                // ランダムな回転を適用
+                // プレハブ本来の回転を起点に、法線方向への回転を適用
+                var normalRotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
+                var baseRotation = normalRotation * instance.transform.rotation;
+                instance.transform.rotation = baseRotation;
+
+                // ランダムな回転を適用（プレハブ本来のオイラー角を起点とする）
                 var randomRotation = new Vector3(
-                    rotationX.isEnabled ? rotationX.RandomValue : instance.transform.rotation.x,
-                    rotationY.isEnabled ? rotationY.RandomValue : instance.transform.rotation.y,
-                    rotationZ.isEnabled ? rotationZ.RandomValue : instance.transform.rotation.z
+                    rotationX.isEnabled ? rotationX.RandomValue : 0f,
+                    rotationY.isEnabled ? rotationY.RandomValue : 0f,
+                    rotationZ.isEnabled ? rotationZ.RandomValue : 0f
                 );
                 instance.transform.Rotate(randomRotation);
 
