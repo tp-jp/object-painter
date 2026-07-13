@@ -66,12 +66,30 @@ jobs:
         working-directory: ${{ env.packagePath }}
         run: zip -r "${{ github.workspace }}/${{ env.zipFile }}" .
 
-      # Make a UnityPackage version of the Package for release
+      - name: Create Package Root Meta
+        run: |
+          package_meta="${{ env.packagePath }}.meta"
+
+          if [ ! -f "$package_meta" ]; then
+            guid=$(printf '%s' "${{ vars.PACKAGE_NAME }}" | md5sum | cut -d ' ' -f 1)
+
+            cat > "$package_meta" << EOF
+          fileFormatVersion: 2
+          guid: $guid
+          folderAsset: yes
+          DefaultImporter:
+            externalObjects: {}
+            userData:
+            assetBundleName:
+            assetBundleVariant:
+          EOF
+          fi
+
       - name: Create UnityPackage
         uses: natsuneko-laboratory/create-unitypackage@v3
         with:
           files-glob: |
-            ${{ env.packagePath }}/**/*
+            ${{ env.packagePath }}/**
           dest: ${{ env.unityPackage }}
 
       # Publish the Release to GitHub
