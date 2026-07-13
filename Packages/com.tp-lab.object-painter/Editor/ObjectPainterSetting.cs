@@ -9,9 +9,11 @@ namespace TpLab.ObjectPainter.Editor
         public GameObject placeObject;
         public Transform parentObject;
         public float brushSize = 1f;
-        public float brushSizeLimit = 10f;
+        public float brushSizeMinLimit = 0.01f;
+        public float brushSizeMaxLimit = 10f;
         public int density = 10;
-        public int densityLimit = 50;
+        public int densityMinLimit = 1;
+        public int densityMaxLimit = 50;
         public bool showPlacementSettings = true;
         public bool showLimitSettings;
 

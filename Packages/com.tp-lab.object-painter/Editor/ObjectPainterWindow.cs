@@ -44,8 +44,8 @@ namespace TpLab.ObjectPainter.Editor
             }
             _setting.placeObject = EditorGUILayout.ObjectField("Place Object", _setting.placeObject, typeof(GameObject), false) as GameObject;
             _setting.parentObject = EditorGUILayout.ObjectField("Parent Object", _setting.parentObject, typeof(Transform), true) as Transform;
-            _setting.brushSize = EditorGUILayout.Slider("Brush Size", _setting.brushSize, 0.1f, _setting.brushSizeLimit);
-            _setting.density = EditorGUILayout.IntSlider("Density", _setting.density, 1, _setting.densityLimit);
+            _setting.brushSize = EditorGUILayout.Slider("Brush Size", _setting.brushSize, _setting.brushSizeMinLimit, _setting.brushSizeMaxLimit);
+            _setting.density = EditorGUILayout.IntSlider("Density", _setting.density, _setting.densityMinLimit, _setting.densityMaxLimit);
             EditorGUILayout.Space();
 
             _setting.showPlacementSettings = EditorGUILayout.Foldout(_setting.showPlacementSettings, "Placement Settings");
@@ -66,8 +66,10 @@ namespace TpLab.ObjectPainter.Editor
             {
                 using (new EditorGUI.IndentLevelScope())
                 {
-                    _setting.brushSizeLimit = EditorGUILayout.FloatField("Brush Size Limit", _setting.brushSizeLimit);
-                    _setting.densityLimit = EditorGUILayout.IntField("Density Limit", _setting.densityLimit);
+                    _setting.brushSizeMinLimit = EditorGUILayout.FloatField("Brush Size Min Limit", _setting.brushSizeMinLimit);
+                    _setting.brushSizeMaxLimit = EditorGUILayout.FloatField("Brush Size Max Limit", _setting.brushSizeMaxLimit);
+                    _setting.densityMinLimit = EditorGUILayout.IntField("Density Min Limit", _setting.densityMinLimit);
+                    _setting.densityMaxLimit = EditorGUILayout.IntField("Density Max Limit", _setting.densityMaxLimit);
                     _setting.rotationX.minLimit = EditorGUILayout.FloatField("Rotation Min Limit X", _setting.rotationX.minLimit);
                     _setting.rotationX.maxLimit = EditorGUILayout.FloatField("Rotation Max Limit X", _setting.rotationX.maxLimit);
                     _setting.rotationY.minLimit = EditorGUILayout.FloatField("Rotation Min Limit Y", _setting.rotationY.minLimit);
